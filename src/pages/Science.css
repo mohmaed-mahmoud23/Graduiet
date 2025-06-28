@@ -1,0 +1,142 @@
+.ti{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.backk-arrow {
+  position: absolute;
+  top:13px;
+  left: 20px;
+  width: 65px;
+  height: 62px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sciencee-container1 {
+  position:relative;
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* margin-top: -10px; */
+  margin-left: 100px;
+}
+.categories-center1 {
+ position: relative;
+  width: 1200px;  
+  height: 600px;   
+  margin-top: -40px;
+margin-left: -150px;
+}
+.mainn-title {
+  position: absolute;
+  top:-30px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  width: 100%; 
+  z-index: 2; 
+}
+
+.linee {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.line11 {
+  width: 300px;
+  height: 300px;
+  left: 200px;
+  top: 205px;
+}
+
+.line22 {
+  width: 310px;
+  height: 255px;
+  left: 430px;
+  top: 180px;
+}
+
+.line33 {
+  width: 340px;
+  height: 340px;
+  left: 600px;
+  top:110px;
+}
+
+.line44 {
+  width: 490px;
+  height: 285px;
+  left: 810px;
+  top: 170px;
+}
+
+.categoryy-item-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reversee-order {
+  flex-direction: column-reverse;
+}
+
+.reversee-order .categoryy-name {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.circlee-item {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.circlee-item:hover {
+  transform: scale(1.1);
+}
+
+.circlee-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.categoryy-name {
+  font-size: 25px;
+  font-weight: bold;
+  color: #23a8fe;
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .sciencee-container {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 900px) {
+  .sciencee-container {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 600px) {
+  .sciencee-container {
+    transform: scale(0.6)
+  }
+}

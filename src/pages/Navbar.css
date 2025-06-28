@@ -1,0 +1,58 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fbfafa;
+    height: 40px; /* ✅ تقليل الارتفاع */
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 8px;
+}
+
+.logo {
+    max-width: 80px;
+    height:auto;
+    object-fit: contain;
+    display: block;
+    padding: 5px 0;
+}
+
+
+.nav-links {
+    font-size: 30px;
+    font-family: 'Segoe';
+    display: flex;
+    gap: 20px;
+}
+
+/* ✅ إضافة مساحة بعد الهيدر حتى لا يغطي الصفحة */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 10px; /* ✅ يترك مساحة بعد الهيدر */
+}
+
+.content {
+    flex: 1;
+}
+
+.image {
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+.logout{
+    color: #3e1a69;
+    background-color: white;
+    border-radius:15px  ;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(83, 74, 74, 0.3);
+    margin-right: 10px;
+}

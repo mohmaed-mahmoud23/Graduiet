@@ -1,0 +1,290 @@
+/* إعدادات الصفحة العامة */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  /* overflow: hidden; */
+}
+
+
+/* تنسيق الحاوية الرئيسية */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* ====== الهيدر (الشريط العلوي) ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* شعار الموقع */
+.logo img {
+  width: 80px;
+}
+
+/* روابط التنقل */
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* أزرار التسجيل وتسجيل الدخول */
+.buttons button {
+  margin-left: 20px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-size:18px;
+  font-weight: bold;
+}
+.buttons link
+, .buttons a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.signup {
+  
+  color: #3e1a69;
+  background-color: white;
+  border-radius:15px  ;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(83, 74, 74, 0.3);
+}
+
+.login {
+  background-color: rgba(92, 19, 228, 0.979);
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(98, 86, 86, 0.3);
+}
+
+.signup:hover {
+  background-color: #ddd;
+}
+
+.login:hover {
+  background-color: darkblue;
+}
+
+/* ====== المحتوى الرئيسي ====== */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/* قسم النصوص */
+.content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size:42px;
+  font-family: 'Segoe';
+}
+
+
+.highlight {
+  color: rgba(61, 3, 250, 0.725);
+}
+
+/* الأزرار الخاصة بالمواد */
+.subjects button {
+  margin-top: 10px;
+  margin-right: 10px;
+  /* padding: 13px 32px; */
+  width: 160px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 20px;
+  color: white;
+}
+
+.subject-row{
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+.subjects button:hover{
+  transform: scale(1.05);
+}
+
+.physics {
+  
+  background-color: #d3b71b;
+}
+
+.chemistry {
+  background-color:rgba(92, 19, 228, 0.979);
+}
+
+.biology {
+  background-color: #ff4800;
+}
+
+.geology {
+  background-color: #cd1d9b;
+}
+
+.astronomy {
+  background-color: #33a0e8;
+}
+
+/* ====== صورة الفتاة العالمة ====== */
+.image {
+  flex-shrink: 0;
+}
+
+.scientist-img {
+  padding-top: 20px;
+  width: 400px;
+  margin-right: 20px;
+  height: 350px;
+}
+.subtitle{
+  font-size: 22px;
+  font-family: 'Segoe'
+}
+
+/**/
+
+.courses-section {
+  text-align: center;
+  padding: 90px 0;  /* زيادة التباعد بين العنوان والمحتوى */
+}
+.our-courses-container{
+  /* display: flex; */
+  align-items: center;
+  
+}
+
+.courses-title {
+  font-size: 42px;
+  font-family: 'Segoe';
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 80px; /* رفع العنوان لأعلى */
+  position: relative;
+  margin-left: 20px;
+}
+
+.add-course-icon {
+  width:65px; /* حجم الأيقونة */
+  height:65px;
+ left: 0; 
+ position: absolute;/* مسافة بين الأيقونة والنص */
+  cursor: pointer;
+  margin-bottom: -12px;
+}
+
+.courses-title span {
+  color: #ff9800;
+  font-weight: bold;
+ 
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* زيادة المسافة بين الصور */
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+}
+
+.course-card {
+  width: 220px; /* زيادة حجم الصور شويه */
+  height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  align-items: center;
+  box-shadow: 0px 6px 12px rgba(0,0,0.2);
+}
+
+.course-card img {
+  width:220px;
+  height: 260px;
+  object-fit: cover;
+ 
+}
+
+
+
+.course-card img:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgb(0,0,0,0.3);
+}
+
+
+
+/**/
+
+
+.about-section {
+  padding:40px 0;
+  margin-bottom:40px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 20px; /* تقليل المسافة بين النص والصورة */
+}
+
+.about-text {
+  flex: 1;
+  text-align: left; /* جعل النص أقرب للصورة */
+}
+
+.about-title {
+  margin-left: 200px;
+  text-align: center;
+  font-size: 42px;
+  font-family: 'Segoe';
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 50px; /* تقليل المسافة تحت العنوان */
+}
+
+.about-text p {
+  font-size: 23px;
+  font-family: 'Segoe';
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
+}
+.about-desc{
+  text-align: left;
+}
+
+
+
+.about-image {
+
+  /* تقليل عرض الصورة */
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.about-image img {
+  width: 170px; /* تصغير الصورة قليلاً */
+  height: auto;
+
+}

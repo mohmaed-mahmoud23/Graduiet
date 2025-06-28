@@ -1,0 +1,128 @@
+.tit{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.back-arrow {
+   position:absolute;
+  top:12px;
+  margin-left: 20px;
+  width: 65px;
+  height: 64px;
+  cursor: pointer;
+z-index: 10;
+}
+
+.categories-center {
+  position: relative;
+  width: 1000px;  
+  height: 600px;   
+  margin: 0 auto;  
+}
+
+.science-container {
+  width: 100%;
+  height: calc(100hv-48px);
+   margin-top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  position: relative;
+  flex-direction: column; /* عشان العنوان يكون فوق والعناصر تحت */
+}
+
+.main-titlee {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.line {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.line1 {
+  left: 90px;
+  top: 210px;
+}
+
+.line2 {
+  left: 360px;
+  top: 200px;
+}
+
+.line3 {
+  left: 620px;
+  top: 200px;
+}
+
+.category-item-wrapper {
+   position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+
+.circle-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.circle-item:hover {
+  transform: scale(1.1);
+}
+
+.circle-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.category-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #453fe1;
+  margin-bottom: 12px; /* مسافة بين النص والدائرة */
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .science-container {
+    transform: scale(0.8);
+    transform-origin: top center;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 900px) {
+  .science-container {
+    transform: scale(0.7);
+      transform-origin: top center;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .science-container {
+    transform: scale(0.6);
+    transform-origin: top center;
+    overflow-x: hidden;
+  }
+}

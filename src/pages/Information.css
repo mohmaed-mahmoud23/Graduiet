@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fffdfd;
+  padding: 20px;
+}
+
+.form {
+  background-color: #cceeff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.save-button {
+  align-self: flex-start; 
+  background-color: #e08e0b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff9800;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff9800;
+}
+
+.textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  resize: vertical;
+  height: 150px;
+}
+
+.input1 {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 200px;
+}
+
+.textarea ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  background-color: #ff9800;
+}
+
+/* .save-button {
+  background-color: #ff9100;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+  width: 50%;
+} */
+
+.save-button:hover {
+  background-color: #ffb24d;
+}
+
+.experiment-header {
+  display: flex;
+  align-items: center;
+  color: #ff9800;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.experiment-icon {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .form {
+    padding: 20px;
+  }
+
+  .input1,
+  .textarea {
+    font-size: 14px;
+  }
+
+  .save-button {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .title,
+  .experiment-header {
+    font-size: 20px;
+  }
+
+ 
+}

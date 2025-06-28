@@ -1,0 +1,112 @@
+.experiment-diagram {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 8px auto;
+  }
+  
+  .center-circle {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background-color: #add8e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #453fe1;
+  }
+  
+  .item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .item .icon {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 8.5px;
+  }
+  
+  .item .label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #453fe1;
+  }
+  
+  .arrow {
+    position: absolute;
+    width: 2%;
+    height: 1%;
+  }
+  
+  /* تحديد مواقع العناصر حول الدائرة */
+  .information {
+    top: 22%;
+    left: -5%;
+  }
+  
+  .tools {
+    top: 2%;
+    left: 50%;
+    right: 50%;
+  }
+  
+  .chemicals {
+    top: 22%;
+    right: -5%;
+  }
+  
+  .equation {
+    bottom: 10%;
+    right: -5%;
+  }
+  
+  .steps {
+    bottom: -12%;
+    left: 50%;
+    right: 50%;
+  }
+  
+  .conclusion {
+    bottom: 10%;
+    left:-5%;
+  }
+  
+  /* تحديد مواقع الأسهم وتدويرها */
+  .information-arrow {
+    top: 12%;
+    left: 16%;
+    transform: rotate(1deg);
+  }
+  
+  .tools-arrow {
+    top: 8%;
+    right: 23%;
+    transform: rotate(55deg);
+  }
+  
+  .chemicals-arrow {
+    top: 50%;
+    right: -11%;
+    transform: rotate(116deg);
+  }
+  
+  .equation-arrow {
+    bottom: 1%;
+    right: 16%;
+    transform: rotate(180deg);
+  }
+  
+  .steps-arrow {
+    bottom:-4%;
+    left: 24%;
+    transform: rotate(-125deg);
+  }
+  
