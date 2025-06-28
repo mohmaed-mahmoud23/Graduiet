@@ -1,17 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header {
+    padding: 8px 20px !important ;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #fbfafa;
-    height: 40px; /* ✅ تقليل الارتفاع */
-    width: 100%;
+    height: 70px; /* ✅ تقليل الارتفاع */
+    width: 100vw;
     /* position: fixed; */
     top: 0;
     left: 0;
     z-index: 1000;
-    padding-top: 8px;
+    /* padding-top: 8px; */
 }
-
+.navbar{
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 .logo {
     max-width: 80px;
     height:auto;
@@ -19,28 +30,31 @@ header {
     display: block;
     padding: 5px 0;
 }
-
-
-.nav-links {
-    font-size: 30px;
-    font-family: 'Segoe';
-    display: flex;
-    gap: 20px;
-}
-
-/* ✅ إضافة مساحة بعد الهيدر حتى لا يغطي الصفحة */
-main {
+nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px;
-    margin-top: 10px; /* ✅ يترك مساحة بعد الهيدر */
+    gap: 5px;
+}
+.nav-buttons button{
+width: 80px;
+height: 40px;
+font-size: 20px;
+font-family: 'Segoe';
+cursor: pointer;
+color: #3e1a69;
+background-color: white;
+border-radius:15px  ;
+box-shadow: 0 4px 8px rgba(83, 74, 74, 0.3);
 }
 
-.content {
-    flex: 1;
+nav a {
+    width: 80px;
+    font-size: 30px;
+    font-family: 'Segoe';
+    display: inline-block;
+    /* gap: 20px; */
 }
+
 
 .image {
     flex: 0.4;

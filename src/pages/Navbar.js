@@ -61,7 +61,8 @@ sessionStorage.setItem("loggedOut", "true"); // ✅ مهم جدًا
 
   return (
     <header>
-      <div className="logo">
+      <div className="navbar">
+           <div className="logo">
         <img src="/images/logo.png" alt="Science Lab Logo" />
       </div>
       <nav>
@@ -106,7 +107,10 @@ sessionStorage.setItem("loggedOut", "true"); // ✅ مهم جدًا
           Contact Us
         </a>
       </nav>
-      <div className="buttons">
+
+      </div>
+   
+      <div className="nav-buttons">
         {isLoggedIn ? (
           <button onClick={handleLogout} className="logout">
             Logout
