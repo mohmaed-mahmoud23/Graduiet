@@ -161,7 +161,7 @@ function PotassiumNitrateExperiment() {
                 alt="experiment structure"
                 className="puzzle-background"
                 style={{ width: "100%", height: "auto" }}
-              />
+              />  
               <h1 className="whitespace-nowrap relative right-20">
                 KNO₃ + H₂SO₄ → HNO₃ + K₂SO₄
               </h1>
