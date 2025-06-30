@@ -39,7 +39,8 @@ const sectionsData = {
     experiments: [
       {
         name: "ohms-law",
-        image: "/images/experimentsPages/2nd/1.png",
+        url: "/Ohm",
+        image: "/images/WhatsApp Image 2025-06-30 at 12.31.18 AM (1).jpeg",
         type: "internal",
       },
       {

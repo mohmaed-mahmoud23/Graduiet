@@ -22,6 +22,7 @@ import Materials from "./InformatiomPAsics/Materialofexperment";
 import Formula from "./InformatiomPAsics/Formula";
 import Stebes from "./InformatiomPAsics/Stebes";
 import PotassiumNitrateExperiment from "./pages/PotassiumNitrateExperiment";
+import Ohm from "./pages/Ohm";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const AuthContext = React.createContext();
@@ -64,6 +65,7 @@ function App() {
             <Route path="/Formula" element={<Formula />} />
             <Route path="/Conclusion" element={<Conclusion />} />
             <Route path="/Stebes" element={<Stebes />} />
+            <Route path="/Ohm" element={<Ohm />} />
             <Route
               path="/PotassiumNitrateExperiment"
               element={<PotassiumNitrateExperiment />}

@@ -23,8 +23,8 @@
   }
   
   .mode-switch img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height:100px;
     cursor: pointer;
     border-radius: 50%;
     border: 2px solid transparent;
@@ -34,8 +34,8 @@
     border-color: #3b82f6;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
   }
-  
-  
+
+
   .chemicals-box {
     background: #ffffff;
     border-radius: 24px;
@@ -114,9 +114,9 @@
   
   .steps-box {
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 20px;
-    width: 45%;
+    width: 78%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
   .steps-box h3 {
@@ -252,7 +252,7 @@
     50% { box-shadow: 0 0 15px 8px #00ffcc; }
     100% { box-shadow: 0 0 0px 0px transparent; }
   }
-  
+
   .experiment-layout {
     display: flex;
     flex-wrap: wrap;
@@ -347,6 +347,7 @@
   .steps-box {
     width: 100%;
     margin-top: 20px;
+    padding: 20px;
   }
 
   .control-buttons {
@@ -360,7 +361,52 @@
   }
 }
 
+.steps-box li.highlight {
+  background-color: #fef08a;
+  border: 2px solid #facc15;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #1e293b;
+  box-shadow: 0 4px 12px rgba(250, 202, 21, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.cont
+rol-buttons {
+  margin-top: 2rem;
+  position: absolute;
+  right: 20px;       /* يبعد 20px من اليمين */
+  bottom: 20px;      /* تحت */
+  display: flex;
+  gap: 10px;
+}
+.control-buttons button {
+  padding: 10px 40px; /* 10 من فوق وتحت، 20 من اليمين والشمال */
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.mode-icon {
+  width: 80px;     /* العرض */
+  height: auto;    /* الارتفاع يتناسب مع العرض */
+  cursor: pointer;
+  flex-direction: row;
+  transition: transform 0.3s ease;
+}
 
+.mode-icon:hover {
+  transform: scale(1.1); /* يكبر شوية عند الهوفر */
+}
+
+.control-buttons {
+  position: absolute;
+  right: 20px;
+  padding: 10px;
+  bottom: -20px; /* بدل 20px */
+  display: flex;
+  gap: 10px;
+}
 
 @media (max-width: 600px) {
   .tools-box,
@@ -374,6 +420,9 @@
 
   .device-title {
     font-size: 20px;
+    
+    font-weight:bolder;
+    
   }
 
   .drag-text {

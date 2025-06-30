@@ -29,7 +29,7 @@ const experimentSteps = [
   "Heat Retort BY Bunsen burner IN 100 c.",
 ];
 
-function PotassiumNitrateExperiment() {
+function Ohm() {
   const [flashZone, setFlashZone] = useState(null);
   const [mode, setMode] = useState("student");
   const [retortItems, setRetortItems] = useState([]);
@@ -162,9 +162,7 @@ function PotassiumNitrateExperiment() {
                 className="puzzle-background"
                 style={{ width: "100%", height: "auto" }}
               />
-              <h1 className="whitespace-nowrap relative right-20">
-                KNO₃ + H₂SO₄ → HNO₃ + K₂SO₄
-              </h1>
+              <h1> KNO₃ + H₂SO₄ → HNO₃ + K₂SO₄ </h1>
               {/* Drop Zones */}
               <div
                 ref={dropRetort}
@@ -282,4 +280,4 @@ function PotassiumNitrateExperiment() {
   );
 }
 
-export default PotassiumNitrateExperiment;
+export default Ohm;
