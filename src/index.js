@@ -1,20 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react"; // لتفعيل التحذيرات والتنبيهات في React
+import { createRoot } from "react-dom/client"; // طريقة العرض الجديدة في React 18
+import "./index.css";
+import App from "./App";
 
+// ✅ استيراد DndProvider و HTML5Backend
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
-// ✅ استيراد AuthProvider من المسار الصح
-import { AuthProvider } from './context/AuthContext';
+// ✅ استيراد AuthProvider
+import { AuthProvider } from "./context/AuthContext"; // تأكد من المسار حسب مكان الملف
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <AuthProvider>
-      <App />
+      <DndProvider backend={HTML5Backend}>
+        <App />
+      </DndProvider>
     </AuthProvider>
-  </React.StrictMode>
+  </StrictMode>
 );
-
-reportWebVitals();

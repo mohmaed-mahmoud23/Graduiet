@@ -1,0 +1,382 @@
+.experiment-layout {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    
+    background-color: #ffffff;
+    
+  }
+  
+  .left-panel {
+    width: 22%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mode-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .mode-switch img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid transparent;
+  }
+  
+  .mode-switch img.active {
+    border-color: #3b82f6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  }
+  
+  
+  .chemicals-box {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .tools-box h3,
+  .chemicals-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #111827;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .tool-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: #111827;
+    cursor: grab;
+  }
+  
+  .tool-item img {
+    width: 12px;
+    
+    height: 50px;
+  }
+  .center-panel {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .device-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #111827;
+  }
+  .device-box {
+    background: #f1f5f9;
+    border-radius: 28px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+
+  .device-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .device-container {
+    position: relative;
+    width: 50%;
+    min-height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .device-image {
+    width: 100%;
+    border-radius: 12px;
+    opacity: 0.95;
+    pointer-events: none;
+  }
+  
+  .steps-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  .steps-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #111827;
+  }
+  
+  .steps-box ol {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .steps-box li {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14.5px;
+    font-weight: bold;
+    border-radius: 12px;
+    background-color: #dbeafe;
+    color: #1e293b;
+    transition: all 0.3s ease;
+  }
+  .steps-box li.highlight {
+    background: #fef08a;
+    border: 2px solid #22c55e;
+  }
+  .step-index {
+    color: #1e40af;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  
+  .control-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    gap: 16px;
+    padding-right: 20px;
+  }
+  
+  .control-buttons button {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .control-buttons .back {
+    background-color: #22c55e;
+    color: white;
+  }
+  
+  .control-buttons .save {
+    background-color: #0ea5e9;
+    color: white;
+  }
+  
+  .drag-text {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+  
+  .draggable-tool {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    color: #111827;
+    cursor: grab;
+  }
+  
+  .draggable-tool img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .drop-section {
+    position: absolute;
+    min-height: 50px;
+    min-width: 80px;
+    border: 2px dashed #60a5fa;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    background-color: rgba(147, 197, 253, 0.15);
+  }
+  
+  .retort {
+    top: 60px;
+    left: 60px;
+  }
+  
+  .bowl {
+    bottom: 50px;
+    right: 90px;
+  }
+  
+  .flask {
+    bottom: 60px;
+    left: 150px;
+  }
+  
+  .dropped-label {
+    background-color: #3b82f6;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin: 2px 0;
+    text-align: center;
+  }
+  .flash-effect {
+    animation: flash 0.5s ease-in-out;
+  }
+  
+  @keyframes flash {
+    0% { box-shadow: 0 0 10px 5px #00ffcc; }
+    50% { box-shadow: 0 0 15px 8px #00ffcc; }
+    100% { box-shadow: 0 0 0px 0px transparent; }
+  }
+  
+  .experiment-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .left-panel {
+    width: 280px;
+    flex-shrink: 0;
+  }
+  
+  .center-panel {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+  }
+  
+  /* تنظيم الأدوات والمواد */
+  .tools-box .grid,
+  .chemicals-box .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+  
+  /* خطوات التجربة */
+  .steps-box ol {
+    padding-left: 20px;
+  }
+  
+  .steps-box li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .steps-box li.highlight {
+    background-color: #eef6ff;
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  /* التحكم في الزرار */
+  .control-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Media Query للأجهزة الصغيرة (تابلت وموبايل) */
+@media (max-width: 1024px) {
+  .experiment-layout {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-panel {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .tools-box,
+  .chemicals-box {
+    width: 45%;
+    min-width: 220px;
+  }
+
+  .mode-switch {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .center-panel {
+    width: 100%;
+    padding: 0;
+  }
+
+  .device-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .device-box {
+    padding: 20px;
+  }
+
+  .steps-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .control-buttons {
+    justify-content: center;
+    padding-right: 0;
+    gap: 10px;
+  }
+
+  .control-buttons button {
+    width: 120px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .tools-box,
+  .chemicals-box {
+    width: 100%;
+  }
+
+  .steps-box li {
+    font-size: 13px;
+  }
+
+  .device-title {
+    font-size: 20px;
+  }
+
+  .drag-text {
+    font-size: 12px;
+  }
+}

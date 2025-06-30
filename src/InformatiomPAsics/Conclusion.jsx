@@ -1,13 +1,8 @@
 "use client";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./Conclusion.css";
-import { useNavigate } from "react-router-dom";
-import { FormDataContext } from "../context/FormDataContext";
 
-const Conclusion = () => {
-  const { formData, setFormData } = useContext(FormDataContext);
-  const navigate = useNavigate();
-
+const Conclusion = ({ formData, setFormData }) => {
   const [observations, setObservations] = useState([]);
   const [currentObservation, setCurrentObservation] = useState({
     question: "",
@@ -24,11 +19,7 @@ const Conclusion = () => {
   const addObservation = () => {
     if (currentObservation.question.trim()) {
       setObservations([...observations, currentObservation]);
-      setCurrentObservation({
-        question: "",
-        options: ["", "", "", ""],
-        correct: [],
-      });
+      setCurrentObservation({ question: "", options: ["", "", "", ""], correct: [] });
     }
   };
 
@@ -38,40 +29,75 @@ const Conclusion = () => {
       setCurrentConclusion({ statement: "", correct: null });
     }
   };
+const sendToAPI = async (data) => {
+  try {
+    const response = await fetch("https://your-api-url.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-  // ✅ دالة الحفظ اللي انت طلبتها
-  const handleSave = () => {
-    const experimentData = {
-      experimentName: formData.experimentName || "",
-      description: formData.description || "",
-      objective: formData.objective || "",
-      observations,
-      conclusions,
-    };
+    if (response.ok) {
+      console.log("Data sent successfully!");
+      // navigate("/upload"); // لو عايزة تنقلي المستخدم
+    } else {
+      console.error("Failed to send data.");
+    }
+  } catch (error) {
+    console.error("Error while sending data:", error);
+  }
+};
 
-    setFormData({ ...formData, experiment: experimentData });
-    console.log("Saved experiment:", experimentData);
-    alert("✅ Save successful");
-    navigate("/createChemistryExperiments");
+const saveData = async () => {
+  // ضيفي البيانات الحالية للمخزن
+  const updatedFormData = {
+    ...formData,
+    observations,
+    conclusions,
   };
+
+  // خزنيها لو حبيتي في localStorage كنسخة احتياطية
+  localStorage.setItem("formData", JSON.stringify(updatedFormData));
+
+  // حفظها في formData
+  setFormData(updatedFormData);
+
+  try {
+    const response = await fetch("http://localhost:4000/api/experiments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedFormData),
+    });
+
+    if (response.ok) {
+      console.log("Data saved successfully to API");
+      alert("✅ Data saved successfully!");
+    } else {
+      console.error("❌ Failed to save data");
+      alert("❌ Failed to save data to API");
+    }
+  } catch (error) {
+    console.error("❌ Error sending data:", error);
+    alert("❌ Error sending data to API");
+  }
+};
+
 
   return (
     <div className="experiment-container">
-      <div className="title-container">
-        <img
-          src="images/Group 955.png"
-          alt="Flask Icon"
-          className="flask-icon"
-        />
-        <h2 className="title">Experiment</h2>
-      </div>
-
+    
+   <div className="title-container">
+  <img src="/flask-icon.jpg" alt="Flask Icon" className="flask-icon" />
+  <h2 className="title">Experiment</h2>
+</div>
       <div className="section">
         <div className="header">
           <span>Observation</span>
-          <button className="add-btn" onClick={addObservation}>
-            +
-          </button>
+          <button className="add-btn" onClick={addObservation}>+</button>
         </div>
         <input
           className="question-input"
@@ -79,10 +105,7 @@ const Conclusion = () => {
           placeholder="Enter your question..."
           value={currentObservation.question}
           onChange={(e) =>
-            setCurrentObservation({
-              ...currentObservation,
-              question: e.target.value,
-            })
+            setCurrentObservation({ ...currentObservation, question: e.target.value })
           }
         />
         {currentObservation.options.map((option, index) => (
@@ -94,10 +117,7 @@ const Conclusion = () => {
                 const newCorrect = currentObservation.correct.includes(index)
                   ? currentObservation.correct.filter((i) => i !== index)
                   : [...currentObservation.correct, index];
-                setCurrentObservation({
-                  ...currentObservation,
-                  correct: newCorrect,
-                });
+                setCurrentObservation({ ...currentObservation, correct: newCorrect });
               }}
             />
             <input
@@ -108,10 +128,7 @@ const Conclusion = () => {
               onChange={(e) => {
                 const newOptions = [...currentObservation.options];
                 newOptions[index] = e.target.value;
-                setCurrentObservation({
-                  ...currentObservation,
-                  options: newOptions,
-                });
+                setCurrentObservation({ ...currentObservation, options: newOptions });
               }}
             />
           </div>
@@ -121,9 +138,7 @@ const Conclusion = () => {
       <div className="section">
         <div className="header">
           <span>Conclusion</span>
-          <button className="add-btn" onClick={addConclusion}>
-            +
-          </button>
+          <button className="add-btn" onClick={addConclusion}>+</button>
         </div>
         <input
           className="question-input"
@@ -131,36 +146,26 @@ const Conclusion = () => {
           placeholder="Enter your conclusion..."
           value={currentConclusion.statement}
           onChange={(e) =>
-            setCurrentConclusion({
-              ...currentConclusion,
-              statement: e.target.value,
-            })
+            setCurrentConclusion({ ...currentConclusion, statement: e.target.value })
           }
         />
         <div className="option">
           <button
             className={currentConclusion.correct === true ? "selected" : ""}
-            onClick={() =>
-              setCurrentConclusion({ ...currentConclusion, correct: true })
-            }
+            onClick={() => setCurrentConclusion({ ...currentConclusion, correct: true })}
           >
             ✅
           </button>
           <button
             className={currentConclusion.correct === false ? "selected" : ""}
-            onClick={() =>
-              setCurrentConclusion({ ...currentConclusion, correct: false })
-            }
+            onClick={() => setCurrentConclusion({ ...currentConclusion, correct: false })}
           >
             ❌
           </button>
         </div>
       </div>
 
-      {/* ✅ زرار الحفظ مع الدالة الجديدة */}
-      <button className="save-btn" onClick={handleSave}>
-        Save
-      </button>
+      <button className="save-btn" onClick={saveData}>Save</button>
     </div>
   );
 };

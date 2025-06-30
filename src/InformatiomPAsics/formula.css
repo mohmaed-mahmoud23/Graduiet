@@ -1,0 +1,126 @@
+.formula-parameters-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: rgba(0, 242, 255, 0.204);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-equation-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.circle-plus {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.add-equation-text {
+  font-weight: bold;
+  color: #333;
+  margin-right: 590px;
+}
+
+.equation-builder-container {
+  background-color: white; /* لون أزرق فاتح مشابه */
+  border: 1px solid #b2ebf2;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  height: 400px;
+}
+
+.equation-builder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.equation-part {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.equation-part select {
+  padding: 10px;
+  border: 1px solid #b2ebf2;
+  border-radius: 4px;
+  min-width: 100px;
+  box-sizing: border-box;
+  height: 38px;
+  background-color: rgba(0, 242, 255, 0.204);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: flex-end;
+  margin-right: 300px;
+}
+
+.back-button,
+.save-button {
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  border: none;
+  width: 100px;
+}
+
+.back-button {
+  background-color: #0ed014;
+  color: white;
+}
+
+.save-button {
+  background-color: #00bbd4df;
+  color: white;
+}
+
+.back-button:hover,
+.save-button:hover {
+  opacity: 0.9;
+}
+
+.save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
