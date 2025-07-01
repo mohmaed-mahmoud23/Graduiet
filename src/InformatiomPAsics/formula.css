@@ -83,7 +83,20 @@ h2 {
   box-sizing: border-box;
   height: 38px;
   background-color: rgba(0, 242, 255, 0.204);
+  color: black;  /* أضفت هذا السطر */
 }
+.equation-part select {
+  color: black !important;
+  background-color: rgba(0, 242, 255, 0.204);
+  padding: 10px;
+  border: 1px solid #b2ebf2;
+  border-radius: 4px;
+  min-width: 100px;
+  box-sizing: border-box;
+  height: 38px;
+  font-size: 16px;
+}
+
 
 .buttons {
   display: flex;

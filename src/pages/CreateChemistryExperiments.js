@@ -56,7 +56,10 @@ function CreateChemistryExperiments() {
           />
         </div>
 
-        <div className="item equation" onClick={() => navigate("/formula")}>
+        <div
+          className="item equation"
+          onClick={() => navigate("/ChemistryFormula")}
+        >
           <img
             src="/images/create-experiments/Group 965.svg"
             alt="Equation"

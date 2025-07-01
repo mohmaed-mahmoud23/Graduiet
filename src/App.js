@@ -57,10 +57,9 @@ function App() {
             <Route path="/tools" element={<ToolsOfChemical />} />
             <Route path="/chemical" element={<ChemicalOfChemistry />} />
             <Route path="/upload" element={<Upload />} />
-            <Route path="/formula" element={<ChemistryFormula />} />
+            <Route path="/ChemistryFormula" element={<ChemistryFormula />} />
             <Route path="/conclusion" element={<Conclusion />} />
             <Route path="//Chemicals" element={<Materials />} />
-            <Route path="/ToolsPhysical" element={<ToolsPhysical />} />
             <Route path="/ToolsPhysical" element={<ToolsPhysical />} />
             <Route path="/Formula" element={<Formula />} />
             <Route path="/Conclusion" element={<Conclusion />} />

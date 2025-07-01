@@ -11,6 +11,16 @@
   max-width: 1000px;
   box-sizing: border-box;
 }
+select {
+  color: black !important;
+  background-color: white !important;
+  border: 1px solid black !important;
+  font-size: 16px !important;
+}
+option {
+  color: black !important;
+  background-color: white !important;
+}
 
 h2 {
   color: #333;
