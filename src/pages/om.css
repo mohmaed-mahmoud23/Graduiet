@@ -1,0 +1,25 @@
+.green {
+    color: #16a34a;
+    font-weight: bold;
+  }
+  .blue {
+    color: #2563eb;
+    font-weight: bold;
+  }
+  .orange {
+    color: #f97316;
+    font-weight: bold;
+  }
+  .red {
+    color: #dc2626;
+    font-weight: bold;
+  }
+  .highlight {
+    background-color: #fef08a;
+    border: 2px solid #facc15;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #1e293b;
+  }
+  

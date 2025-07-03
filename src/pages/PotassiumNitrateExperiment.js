@@ -4,7 +4,7 @@ import DraggableTool from "../pages/DraggableTool";
 import "../pages/PotassiumNitrateExperiment.css";
 
 const tools = [
-  { name: "Stand", image: "/ImageDrage/Group 973.png" },
+  { name: "Stand", image: "" },
   { name: "Retort", image: "/ImageDrage/Group 974.png" },
   { name: "Glass bowl", image: "/ImageDrage/Group 975.png" },
   { name: "Bunsen burner", image: "/ImageDrage/Group 976.png" },
@@ -17,7 +17,6 @@ const chemicals = [
   { name: "H₂SO₄", image: "/ImageDrage/Group 906.png" },
   { name: "HNO₃", image: "/ImageDrage/Group 907.png" },
 ];
-
 const experimentSteps = [
   "Measure 50 g OF KNO₃ IN Test tube.",
   "Pour Test tube INTO Retort.",
@@ -161,7 +160,7 @@ function PotassiumNitrateExperiment() {
                 alt="experiment structure"
                 className="puzzle-background"
                 style={{ width: "100%", height: "auto" }}
-              />  
+              />
               <h1 className="whitespace-nowrap relative right-20">
                 KNO₃ + H₂SO₄ → HNO₃ + K₂SO₄
               </h1>
